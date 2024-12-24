@@ -1,4 +1,4 @@
-# @types/iab-adcom
+# iab-adcom
 
 TypeScript type definitions for IAB Tech Lab's AdCOM (Advertising Common Object Model).
 
@@ -9,7 +9,7 @@ This package provides TypeScript type definitions based on the [AdCOM v1.0 speci
 ## Installation
 
 ```bash
-npm install @types/iab-adcom
+npm install iab-adcom
 ```
 
 ## Usage
