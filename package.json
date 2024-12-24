@@ -1,0 +1,41 @@
+{
+  "name": "@types/iab-adcom",
+  "version": "0.0.0",
+  "description": "TypeScript definitions for IAB Tech Lab's AdCOM (Advertising Common Object Model)",
+  "types": "src/index.d.ts",
+  "typings": "src/index.d.ts",
+  "keywords": [
+    "AdCOM",
+    "IAB Tech Lab",
+    "OpenRTB",
+    "typescript",
+    "types",
+    "definitions",
+    "advertising",
+    "programmatic"
+  ],
+  "author": {
+    "name": "Kai Miyamoto",
+    "url": "https://github.com/hogekai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hogekai/types-iab-adcom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hogekai/types-iab-adcom/issues"
+  },
+  "homepage": "https://github.com/hogekai/types-iab-adcom#readme",
+  "license": "MIT",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
