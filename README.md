@@ -15,10 +15,20 @@ npm install iab-adcom
 ## Usage
 
 ```typescript
-import { Ad, Placement } from 'iab-adcom';
+import { AdCOM } from 'iab-adcom';
 // or
 import { DisplayPlacement } from 'iab-adcom/placement';
 import { Site } from 'iab-adcom/context';
+
+// AdCOM.Placement.DisplayPlacement
+// AdCOM.Media.Ad
+// AdCOM.Context.Site
+```
+
+enum:
+```typescript
+import { AudioVideoCreativeSubtype } from 'iab-adcom';
+// or
 import { VideoPlacementType } from 'iab-adcom/enum';
 ```
 
