@@ -159,7 +159,6 @@ export interface Display {
 
   /**
    * URL of a page informing the user about a buyer's targeting activity
-   * @format uri
    */
   priv?: string;
 
@@ -170,7 +169,6 @@ export interface Display {
 
   /**
    * URL for retrieving display markup
-   * @format uri
    */
   curl?: string;
 
@@ -198,7 +196,6 @@ export interface Display {
 export interface Banner {
   /**
    * URL that will return the image
-   * @format uri
    */
   img: string;
 
@@ -277,13 +274,11 @@ export interface Asset {
 export interface LinkAsset {
   /**
    * Landing URL of the clickable link
-   * @format uri
    */
   url: string;
 
   /**
    * Fallback URL for deep-link
-   * @format uri
    */
   urlfb?: string;
 
@@ -409,7 +404,6 @@ export interface Event {
 
   /**
    * URL of the tracking pixel or JavaScript tag
-   * @format uri
    */
   url?: string;
 
@@ -427,7 +421,6 @@ export interface Event {
 export interface Video {
   /**
    * Mime types of the ad creatives
-   * @pattern ^(video)\/.+
    */
   mime?: string[];
 
@@ -455,7 +448,6 @@ export interface Video {
 
   /**
    * URL for retrieving markup
-   * @format uri
    */
   curl?: string;
 
@@ -495,7 +487,6 @@ export interface Audio {
 
   /**
    * URL for retrieving markup
-   * @format uri
    */
   curl?: string;
 

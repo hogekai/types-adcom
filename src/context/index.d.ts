@@ -32,7 +32,6 @@ export interface DistributionChannel {
 export interface Site extends DistributionChannel {
   /**
    * Domain of the site
-   * @pattern ^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$
    */
   domain?: string;
 
@@ -78,13 +77,11 @@ export interface Site extends DistributionChannel {
 
   /**
    * URL of the page
-   * @format uri
    */
   page?: string;
 
   /**
    * Referrer URL
-   * @format uri
    */
   ref?: string;
 
@@ -127,7 +124,6 @@ export interface Publisher {
 
   /**
    * Highest level domain
-   * @pattern ^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$
    */
   domain?: string;
 
@@ -147,7 +143,6 @@ export interface Publisher {
 export interface App extends DistributionChannel {
   /**
    * Domain of the app
-   * @pattern ^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$
    */
   domain?: string;
 
@@ -204,7 +199,6 @@ export interface App extends DistributionChannel {
 
   /**
    * App store URL
-   * @format uri
    */
   storeurl?: string;
 

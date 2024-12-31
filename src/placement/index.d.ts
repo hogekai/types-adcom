@@ -450,7 +450,6 @@ export interface EventSpec {
 
   /**
    * Array of JavaScript tracker domains
-   * @pattern ^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$
    */
   jstrk?: string[];
 
@@ -465,7 +464,6 @@ export interface EventSpec {
 
   /**
    * Array of pixel tracker domains
-   * @pattern ^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$
    */
   pxtrk?: string[];
 
