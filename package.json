@@ -45,7 +45,7 @@
   "homepage": "https://github.com/hogekai/types-iab-adcom#readme",
   "license": "MIT",
   "files": [
-    "src/",
+    "dist/",
     "README.md",
     "LICENSE"
   ],
