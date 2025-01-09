@@ -5,25 +5,27 @@
   "import": "./src/index.js",
   "require": "./src/index.js",
   "types": "./src/index.d.ts",
-  "./media": {
-    "import": "./src/media/index.d.ts",
-    "require": "./src/media/index.d.ts",
-    "types": "./src/media/index.d.ts"
-  },
-  "./context": {
-    "import": "./src/context/index.d.ts",
-    "require": "./src/context/index.d.ts",
-    "types": "./src/context/index.d.ts"
-  },
-  "./placement": {
-    "import": "./src/placement/index.d.ts",
-    "require": "./src/placement/index.d.ts",
-    "types": "./src/placement/index.d.ts"
-  },
-  "./enum": {
-    "import": "./src/enum/index.js",
-    "require": "./src/enum/index.js",
-    "types": "./src/enum/index.d.ts"
+  "exports": {
+    "./media": {
+      "import": "./src/media/index.d.ts",
+      "require": "./src/media/index.d.ts",
+      "types": "./src/media/index.d.ts"
+    },
+    "./context": {
+      "import": "./src/context/index.ts",
+      "require": "./src/context/index.ts",
+      "types": "./src/context/index.ts"
+    },
+    "./placement": {
+      "import": "./src/placement/index.ts",
+      "require": "./src/placement/index.ts",
+      "types": "./src/placement/index.ts"
+    },
+    "./enum": {
+      "import": "./src/enum/index.ts",
+      "require": "./src/enum/index.ts",
+      "types": "./src/enum/index.ts"
+    }
   },
   "scripts": {
     "build": "tsc",
@@ -65,25 +67,27 @@
     "import": "./dist/index.js",
     "require": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "./media": {
-      "import": "./dist/media/index.d.ts",
-      "require": "./dist/media/index.d.ts",
-      "types": "./dist/media/index.d.ts"
-    },
-    "./context": {
-      "import": "./dist/context/index.d.ts",
-      "require": "./dist/context/index.d.ts",
-      "types": "./dist/context/index.d.ts"
-    },
-    "./placement": {
-      "import": "./dist/placement/index.d.ts",
-      "require": "./dist/placement/index.d.ts",
-      "types": "./dist/placement/index.d.ts"
-    },
-    "./enum": {
-      "import": "./dist/enum/index.js",
-      "require": "./dist/enum/index.js",
-      "types": "./dist/enum/index.d.ts"
+    "exports": {
+      "./media": {
+        "import": "./dist/media/index.d.ts",
+        "require": "./dist/media/index.d.ts",
+        "types": "./dist/media/index.d.ts"
+      },
+      "./context": {
+        "import": "./dist/context/index.d.ts",
+        "require": "./dist/context/index.d.ts",
+        "types": "./dist/context/index.d.ts"
+      },
+      "./placement": {
+        "import": "./dist/placement/index.d.ts",
+        "require": "./dist/placement/index.d.ts",
+        "types": "./dist/placement/index.d.ts"
+      },
+      "./enum": {
+        "import": "./dist/enum/index.js",
+        "require": "./dist/enum/index.js",
+        "types": "./dist/enum/index.d.ts"
+      }
     }
   },
   "devDependencies": {
