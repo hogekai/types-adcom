@@ -2,9 +2,9 @@
   "name": "iab-adcom",
   "version": "0.1.9",
   "description": "TypeScript definitions for IAB Tech Lab's AdCOM (Advertising Common Object Model)",
-  "import": "./src/index.js",
-  "require": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "import": "./dist/index.js",
+  "require": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     "./media": {
       "import": "./src/media/index.d.ts",
@@ -64,10 +64,12 @@
   },
   "publishConfig": {
     "access": "public",
-    "import": "./dist/index.js",
-    "require": "./dist/index.js",
-    "types": "./dist/index.d.ts",
     "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
       "./media": {
         "import": "./dist/media/index.d.ts",
         "require": "./dist/media/index.d.ts",
