@@ -552,6 +552,374 @@ export interface Segment {
 }
 
 /**
+ * Interface representing user information
+ */
+export interface User {
+  /**
+   * Vendor-specific ID for the user
+   * At least one of id or buyeruid is strongly recommended
+   */
+  id?: string;
+
+  /**
+   * Buyer-specific ID for the user as mapped by an exchange for the buyer
+   * At least one of id or buyeruid is strongly recommended
+   */
+  buyeruid?: string;
+
+  /** @deprecated Year of birth as a 4-digit integer */
+  yob?: number;
+
+  /** @deprecated Gender, where "M" = male, "F" = female, "O" = known to be other */
+  gender?: "M" | "F" | "O";
+
+  /**
+   * @deprecated Comma-separated list of keywords, interests, or intent
+   * Only one of 'keywords' or 'kwarray' may be present
+   */
+  keywords?: string;
+
+  /**
+   * Array of keywords describing the content
+   * Only one of 'keywords' or 'kwarray' may be present
+   */
+  kwarray?: string[];
+
+  /**
+   * GDPR consent string if applicable
+   */
+  consent?: string;
+
+  /**
+   * Location of the user's home base
+   */
+  geo?: Geo;
+
+  /**
+   * Additional user data
+   */
+  data?: Data[];
+
+  /**
+   * Extended (third-party) identifiers for this user
+   */
+  eids?: ExtendedIdentifier[];
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing device information
+ */
+export interface Device {
+  /**
+   * The general type of device
+   */
+  type?: number;
+
+  /**
+   * Browser user agent string
+   */
+  ua?: string;
+
+  /**
+   * Structured user agent information
+   */
+  sua?: UserAgent;
+
+  /**
+   * ID sanctioned for advertiser use in the clear
+   */
+  ifa?: string;
+
+  /**
+   * Standard "Do Not Track" flag, 0 = tracking is unrestricted, 1 = do not track
+   */
+  dnt?: number;
+
+  /**
+   * "Limit Ad Tracking" signal, 0 = tracking is unrestricted, 1 = tracking must be limited
+   */
+  lmt?: number;
+
+  /**
+   * Device make (e.g., "Apple")
+   */
+  make?: string;
+
+  /**
+   * Device model
+   */
+  model?: string;
+
+  /**
+   * Device operating system
+   */
+  os?: number;
+
+  /**
+   * Device operating system version
+   */
+  osv?: string;
+
+  /**
+   * Hardware version of the device
+   */
+  hwv?: string;
+
+  /**
+   * Physical height of the screen in pixels
+   */
+  h?: number;
+
+  /**
+   * Physical width of the screen in pixels
+   */
+  w?: number;
+
+  /**
+   * Screen size as pixels per linear inch
+   */
+  ppi?: number;
+
+  /**
+   * The ratio of physical pixels to device independent pixels
+   */
+  pxratio?: number;
+
+  /**
+   * Support for JavaScript, 0 = no, 1 = yes
+   */
+  js?: number;
+
+  /**
+   * Browser language using ISO-639-1-alpha-2
+   */
+  lang?: string;
+
+  /**
+   * Browser language using IETF BCP 47
+   */
+  langb?: string;
+
+  /**
+   * IPv4 address closest to device
+   */
+  ip?: string;
+
+  /**
+   * IPv6 address closest to device
+   */
+  ipv6?: string;
+
+  /**
+   * The value of the "x-forwarded-for" header
+   */
+  xff?: string;
+
+  /**
+   * Indicator of truncation of IP attributes
+   */
+  iptr?: number;
+
+  /**
+   * Carrier or ISP
+   */
+  carrier?: string;
+
+  /**
+   * Mobile carrier as MCC-MNC code
+   */
+  mccmnc?: string;
+
+  /**
+   * MCC and MNC of the SIM card
+   */
+  mccmncsim?: string;
+
+  /**
+   * Network connection type
+   */
+  contype?: number;
+
+  /**
+   * Indicates if geolocation API will be available
+   */
+  geofetch?: number;
+
+  /**
+   * Location of the device
+   */
+  geo?: Geo;
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing structured user agent information
+ */
+export interface UserAgent {
+  /**
+   * Array of browser identifiers
+   */
+  browsers?: BrandVersion[];
+
+  /**
+   * User agent's execution platform/OS
+   */
+  platform?: BrandVersion;
+
+  /**
+   * Mobile preference indicator
+   */
+  mobile?: number;
+
+  /**
+   * Device's major binary architecture
+   */
+  architecture?: string;
+
+  /**
+   * Device's bitness
+   */
+  bitness?: string;
+
+  /**
+   * Device model
+   */
+  model?: string;
+
+  /**
+   * Source of data used to create this object
+   */
+  source?: number;
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing brand version information
+ */
+export interface BrandVersion {
+  /**
+   * A brand identifier
+   */
+  brand?: string;
+
+  /**
+   * Sequence of version components
+   */
+  version?: string[];
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing geographic location
+ */
+export interface Geo {
+  /**
+   * Source of location data
+   */
+  type?: number;
+
+  /**
+   * Latitude from -90.0 to +90.0
+   */
+  lat?: number;
+
+  /**
+   * Longitude from -180.0 to +180.0
+   */
+  lon?: number;
+
+  /**
+   * Estimated location accuracy in meters
+   */
+  accur?: number;
+
+  /**
+   * Number of seconds since geolocation fix was established
+   */
+  lastfix?: number;
+
+  /**
+   * Service used to determine geolocation from IP
+   */
+  ipserv?: number;
+
+  /**
+   * Country code using ISO-3166-1-alpha-2
+   */
+  country?: string;
+
+  /**
+   * Region code using ISO-3166-2
+   */
+  region?: string;
+
+  /**
+   * Regional marketing areas
+   */
+  metro?: string;
+
+  /**
+   * City using UN/LOCODE
+   */
+  city?: string;
+
+  /**
+   * ZIP or postal code
+   */
+  zip?: string;
+
+  /**
+   * Local time offset from UTC in minutes
+   */
+  utcoffset?: number;
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing extended identifiers for audience data
+ * Note: Exchange should ensure business agreements allow for sending this data
+ * and compliance with regulatory agencies and ID vendors
+ */
+export interface ExtendedIdentifier {
+  /**
+   * Source or technology provider responsible for the set of included IDs
+   * Expressed as a top-level domain
+   */
+  source?: string;
+
+  /**
+   * Array of extended ID UID objects from the given source
+   */
+  uids?: ExtendedIdentifierUID[];
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
  * Interface representing Extended Identifier UIDs
  */
 export interface ExtendedIdentifierUID {
@@ -562,7 +930,7 @@ export interface ExtendedIdentifierUID {
 
   /**
    * Type of user agent the match is from
-   * It is highly recommended to set this, as many DSPs separate app-native IDs 
+   * It is highly recommended to set this, as many DSPs separate app-native IDs
    * from browser-based IDs and require a type value for ID resolution
    */
   atype?: number;
