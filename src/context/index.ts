@@ -550,3 +550,84 @@ export interface Segment {
    */
   ext?: Record<string, unknown>;
 }
+
+/**
+ * Interface representing Extended Identifier UIDs
+ */
+export interface ExtendedIdentifierUID {
+  /**
+   * Cookie or platform-native identifier
+   */
+  id?: string;
+
+  /**
+   * Type of user agent the match is from
+   * It is highly recommended to set this, as many DSPs separate app-native IDs 
+   * from browser-based IDs and require a type value for ID resolution
+   */
+  atype?: number;
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing regulations in effect
+ */
+export interface Regs {
+  /**
+   * Flag indicating if COPPA regulations apply
+   * 0 = no, 1 = yes
+   */
+  coppa?: number;
+
+  /**
+   * Flag indicating if GDPR regulations apply
+   * 0 = no, 1 = yes
+   */
+  gdpr?: number;
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
+
+/**
+ * Interface representing restrictions on ad responses
+ */
+export interface Restrictions {
+  /**
+   * Block list of content categories using IDs from the taxonomy indicated in cattax
+   */
+  bcat?: string[];
+
+  /**
+   * The taxonomy in use for the bcat attribute
+   * @default 2
+   */
+  cattax?: number;
+
+  /**
+   * Block list of advertisers by their domains (e.g., "ford.com")
+   */
+  badv?: string[];
+
+  /**
+   * Block list of apps for which ads are disallowed
+   * Should be bundle or package names (e.g., "com.foo.mygame")
+   */
+  bapp?: string[];
+
+  /**
+   * Block list of creative attributes
+   */
+  battr?: number[];
+
+  /**
+   * Optional vendor-specific extensions
+   */
+  ext?: Record<string, unknown>;
+}
