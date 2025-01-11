@@ -949,13 +949,13 @@ export interface Regs {
    * Flag indicating if COPPA regulations apply
    * 0 = no, 1 = yes
    */
-  coppa?: number;
+  coppa?: 0 | 1;
 
   /**
    * Flag indicating if GDPR regulations apply
    * 0 = no, 1 = yes
    */
-  gdpr?: number;
+  gdpr?: 0 | 1;
 
   /**
    * Optional vendor-specific extensions
