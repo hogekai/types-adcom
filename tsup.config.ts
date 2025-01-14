@@ -6,8 +6,8 @@ export default defineConfig({
   minify: true,
   entry: [
     "./src/index.ts",
-    "./context/index.ts",
-    "./enum/index.ts",
-    "./placement/index.ts",
+    "./src/context/index.ts",
+    "./src/enum/index.ts",
+    "./src/placement/index.ts",
   ],
 });

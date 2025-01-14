@@ -41,7 +41,7 @@
     "access": "public",
     "exports": {
       ".": {
-        "import": "./dist/index.js",
+        "import": "./dist/index.mjs",
         "require": "./dist/index.js",
         "types": "./dist/index.d.ts"
       },
@@ -61,7 +61,7 @@
         "types": "./dist/placement/index.d.ts"
       },
       "./enum": {
-        "import": "./dist/enum/index.js",
+        "import": "./dist/enum/index.mjs",
         "require": "./dist/enum/index.js",
         "types": "./dist/enum/index.d.ts"
       }
