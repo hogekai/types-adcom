@@ -2,7 +2,7 @@
  * This group of objects represent concepts that are interacting, presenting, enclosing, or are otherwise relating to the world in which impressions live. These include the user, their device, their location, the channel (e.g., site, app, digital out-of-home) with which they are interacting, the channel's publisher, its content, and any regulations that are in effect (e.g., COPPA, GDPR).
  * @see https://github.com/InteractiveAdvertisingBureau/AdCOM/blob/main/AdCOM%20v1.0%20FINAL.md#context-objects-
  */
-import { AgentType, CategoryTaxonomy, DeviceType, DOOHVenueType } from "../enum";
+import { AgentType, CategoryTaxonomy, DeviceType, DOOHVenueType, LocationType } from "../enum";
 
 /**
  * Abstract base interface for all distribution channels
@@ -833,7 +833,7 @@ export interface Geo {
   /**
    * Source of location data
    */
-  type?: number;
+  type?: LocationType;
 
   /**
    * Latitude from -90.0 to +90.0
